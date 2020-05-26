@@ -1,4 +1,4 @@
-package com.example.zjxtest.schedulingtasks;
+package com.example.wechattest.schedulingtasks;
 
 /*
  * Copyright 2012-2015 the original author or authors.

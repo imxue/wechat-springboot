@@ -1,4 +1,4 @@
-package com.example.zjxtest.datamysql;
+package com.example.wechattest.datamysql;
 
 
 import javax.persistence.Entity;

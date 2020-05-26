@@ -1,16 +1,13 @@
-package com.example.zjxtest;
+package com.example.wechattest;
 
-import com.example.zjxtest.datamysql.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @SpringBootTest
-class ZjxtestApplicationTests {
+class WechattestApplicationTests {
 
 	@Resource
 	private JdbcTemplate jdbcTemplate;

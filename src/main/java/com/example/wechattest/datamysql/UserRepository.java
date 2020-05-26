@@ -1,8 +1,8 @@
-package com.example.zjxtest.datamysql;
+package com.example.wechattest.datamysql;
 
 //import org.springframework.data.repository.CrudRepository;
 //
-//import com.example.zjxtest.datamysql.User;
+//import User;
 //
 //// This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 //// CRUD refers Create, Read, Update, Delete

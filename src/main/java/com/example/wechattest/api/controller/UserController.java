@@ -1,11 +1,9 @@
-package com.example.zjxtest.api.controller;
+package com.example.wechattest.api.controller;
 
-import com.example.zjxtest.datamysql.User;
-//import com.example.zjxtest.datamysql.UserRepository;
+import com.example.wechattest.datamysql.User;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController// This means that this class is a Controller

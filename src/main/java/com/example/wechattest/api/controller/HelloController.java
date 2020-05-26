@@ -1,6 +1,6 @@
-package com.example.zjxtest.api.controller;
+package com.example.wechattest.api.controller;
 
-import com.example.zjxtest.api.service.HelloService;
+import com.example.wechattest.api.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

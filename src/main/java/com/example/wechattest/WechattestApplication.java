@@ -1,25 +1,19 @@
-package com.example.zjxtest;
+package com.example.wechattest;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.Arrays;
 
 @SpringBootApplication
 @EnableSwagger2
 //开启定时任务
 //@EnableScheduling
 @ComponentScan(value = {"com"})
-public class ZjxtestApplication {
+public class WechattestApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ZjxtestApplication.class, args);
+		SpringApplication.run(WechattestApplication.class, args);
 	}
 
 //	@Bean

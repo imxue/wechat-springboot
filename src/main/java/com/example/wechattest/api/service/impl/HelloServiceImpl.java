@@ -1,6 +1,6 @@
-package com.example.zjxtest.api.service.impl;
+package com.example.wechattest.api.service.impl;
 
-import com.example.zjxtest.api.service.HelloService;
+import com.example.wechattest.api.service.HelloService;
 import org.springframework.stereotype.Service;
 
 @Service

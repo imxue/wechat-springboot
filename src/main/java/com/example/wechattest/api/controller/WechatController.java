@@ -1,4 +1,4 @@
-package com.example.zjxtest.api.controller;
+package com.example.wechattest.api.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

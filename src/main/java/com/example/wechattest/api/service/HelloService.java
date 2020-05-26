@@ -1,4 +1,4 @@
-package com.example.zjxtest.api.service;
+package com.example.wechattest.api.service;
 
 
 public interface HelloService {
