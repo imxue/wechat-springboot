@@ -1,0 +1,5 @@
+wechat:
+  #微信相关
+  appid: wx9d9bb043b1fd45e0
+  appsecret: 019ba69b7742e771e874b9a24c168787
+  accessTokenUrl: https://api.weixin.qq.com/cgi-bin/token
