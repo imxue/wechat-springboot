@@ -42,7 +42,7 @@ public class WechatInit implements CommandLineRunner {
         if(result!=null){
             if(result.get(0)!=null){
                 String accesstoken = result.get(0).getAccess_token();
-                LOG.info(">>>>"+accesstoken);
+                LOG.info("初始化中获取"+accesstoken);
                 //更新公众号菜单
                 this.createMenu(accesstoken);
                 LOG.info("微信初始化完成");
@@ -66,7 +66,7 @@ public class WechatInit implements CommandLineRunner {
 
         }
         ResponseEntity<JSONObject> responseEntity = restTemplate.postForEntity(url,postData ,JSONObject.class);
-        LOG.info(responseEntity.getBody().toString());
+        LOG.info("生成菜单"+responseEntity.getBody().toString());
     }
 
     //获取菜单
