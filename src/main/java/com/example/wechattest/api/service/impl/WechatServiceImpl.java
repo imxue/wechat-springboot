@@ -1,12 +1,11 @@
 package com.example.wechattest.api.service.impl;
 
 
-import com.example.wechattest.DataModel.User;
 import com.example.wechattest.DataModel.WechatToken;
 import com.example.wechattest.Mapper.WechatMapper;
 import com.example.wechattest.api.service.WechatService;
 import com.example.wechattest.util.MyProps;
-import com.sun.deploy.net.HttpUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
