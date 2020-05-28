@@ -32,8 +32,7 @@ public class WechatServiceImpl implements WechatService {
     public List<WechatToken> getAccessToken(){
         List<WechatToken> result = wechatMapper.getWechatToken();
         long nowTime = System.currentTimeMillis();
-        LOG.info("获取accesstoken");
-        LOG.info(result.toString());
+        LOG.info("获取accesstoken"+result.toString());
         if(result!=null){
             if(result.get(0)!=null){
                 long time = result.get(0).getTime();
@@ -59,7 +58,7 @@ public class WechatServiceImpl implements WechatService {
         long time = System.currentTimeMillis();
         WechatToken wechatToken = responseEntity.getBody();
         wechatToken.setTime(time);
-        System.out.println(responseEntity.getBody().toString());
+        LOG.info("从微信服务器获取accesstoken"+wechatToken.toString());
         return wechatToken;
     }
     @Override
@@ -76,6 +75,7 @@ public class WechatServiceImpl implements WechatService {
         String access_token = wechatToken.getAccess_token();
         long time = System.currentTimeMillis();
         wechatMapper.updateWechatToken(access_token,time);
+        LOG.info("更新accesstoken"+wechatToken.toString());
         return wechatToken;
     }
 }
