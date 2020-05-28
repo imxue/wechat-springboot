@@ -65,6 +65,7 @@ public class WechatInit implements CommandLineRunner {
         }catch (Exception e){
 
         }
+        LOG.info("菜单信息"+postData.toString());
         ResponseEntity<JSONObject> responseEntity = restTemplate.postForEntity(url,postData ,JSONObject.class);
         LOG.info("生成菜单"+responseEntity.getBody().toString());
     }
