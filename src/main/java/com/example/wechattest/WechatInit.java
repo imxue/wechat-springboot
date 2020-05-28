@@ -8,12 +8,17 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-public class WechatInit {
+@Component
+@Order(value=1)
+public class WechatInit implements CommandLineRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(LogConfig.class);
     public WechatInit() {
@@ -25,6 +30,11 @@ public class WechatInit {
     MyProps myProps;
     @Autowired
     WechatService wechatService;
+
+    @Override
+    public void run(String... args) throws Exception {
+        this.init();
+    }
     public void init(){
         //初始化获取accesstoken
         List<WechatToken> result = null;
