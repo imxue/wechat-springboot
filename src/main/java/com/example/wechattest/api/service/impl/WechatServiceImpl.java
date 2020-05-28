@@ -30,13 +30,11 @@ public class WechatServiceImpl implements WechatService {
         if(result.size()>0 && result.get(0)!=null){
             long time = result.get(0).getTime();
             if((nowTime-time)/1000>7200){
-                this.updateAccessToken();
+                WechatToken wechatToken = this.updateAccessToken();
+                result.add(wechatToken);
             }
         }else{
-            WechatToken wechatToken = this.getAccessTokenFromWechat();
-            if(wechatToken!=null){
-                this.insertAccessToken();
-            }
+            WechatToken wechatToken = this.insertAccessToken();
             result.add(wechatToken);
         }
         return result;
@@ -55,19 +53,19 @@ public class WechatServiceImpl implements WechatService {
         return wechatToken;
     }
     @Override
-    public String insertAccessToken(){
+    public WechatToken insertAccessToken(){
         WechatToken wechatToken = this.getAccessTokenFromWechat();
         String access_token = wechatToken.getAccess_token();
         long time = System.currentTimeMillis();
         wechatMapper.insertWechatToken(access_token,time);
-        return "insert success";
+        return wechatToken;
     }
     @Override
-    public String updateAccessToken(){
+    public WechatToken updateAccessToken(){
         WechatToken wechatToken = this.getAccessTokenFromWechat();
         String access_token = wechatToken.getAccess_token();
         long time = System.currentTimeMillis();
         wechatMapper.updateWechatToken(access_token,time);
-        return "update success";
+        return wechatToken;
     }
 }

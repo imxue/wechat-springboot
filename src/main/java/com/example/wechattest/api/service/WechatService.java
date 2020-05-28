@@ -20,12 +20,12 @@ public interface WechatService {
      *
      * @return
      */
-    String insertAccessToken();
+    WechatToken insertAccessToken();
     /***
      * 更新微信accesstoken
      *
      * @return
      */
-    String updateAccessToken();
+    WechatToken updateAccessToken();
 
 }
