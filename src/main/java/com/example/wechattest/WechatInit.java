@@ -60,10 +60,11 @@ public class WechatInit implements CommandLineRunner {
     public void createMenu(String accesstoken){
         String url =myProps.getCreateMenuUrl()+accesstoken;
         JSONObject postData = null;
+        LOG.info("菜单信息"+myProps.getMenu());
         try{
             postData = new JSONObject(myProps.getMenu());
         }catch (Exception e){
-
+            LOG.info(e.toString());
         }
         LOG.info("菜单信息"+postData.toString());
         ResponseEntity<JSONObject> responseEntity = restTemplate.postForEntity(url,postData ,JSONObject.class);
