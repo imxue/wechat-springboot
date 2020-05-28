@@ -35,7 +35,7 @@ public class WechatServiceImpl implements WechatService {
                 myProps.getAppid()+
                 "&secret="+myProps.getAppsecret();
         ResponseEntity<WechatToken> responseEntity = restTemplate.getForEntity(url, WechatToken.class);
-        System.out.println(responseEntity.getBody());
+        System.out.println(responseEntity.getBody().toString());
         WechatToken wechatToken = responseEntity.getBody();
         return wechatToken;
     }

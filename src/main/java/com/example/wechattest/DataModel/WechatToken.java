@@ -19,4 +19,12 @@ public class WechatToken {
     public void setAccesstoken(String accesstoken) {
         this.accesstoken = accesstoken;
     }
+
+    @Override
+    public String toString() {
+        return "WechatToken{" +
+                "accesstoken='" + accesstoken + '\'' +
+                ", time=" + time +
+                '}';
+    }
 }
