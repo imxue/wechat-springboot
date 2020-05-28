@@ -27,13 +27,19 @@ public class WechatInit {
     WechatService wechatService;
     public void init(){
         //初始化获取accesstoken
-        List<WechatToken> result = wechatService.getAccessToken();
-        if(result!=null && result.get(0)!=null){
-            String accesstoken = result.get(0).getAccess_token();
-            LOG.info(accesstoken);
-            //更新公众号菜单
-            this.createMenu(accesstoken);
-            LOG.info("微信初始化完成");
+        List<WechatToken> result = null;
+        result = wechatService.getAccessToken();
+        if(result!=null){
+            if(result.get(0)!=null){
+                String accesstoken = result.get(0).getAccess_token();
+                LOG.info(accesstoken);
+                //更新公众号菜单
+                this.createMenu(accesstoken);
+                LOG.info("微信初始化完成");
+            }else{
+                LOG.info("微信初始化失败");
+            }
+
         }else{
             LOG.info("微信初始化失败");
         }
