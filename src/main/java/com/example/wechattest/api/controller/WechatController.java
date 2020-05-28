@@ -37,6 +37,9 @@ public class WechatController {
             }
         }else{
             WechatToken wechatToken = wechatService.getAccessTokenFromWechat();
+            if(wechatToken!=null){
+                wechatService.insertAccessToken();
+            }
             result.add(wechatToken);
         }
         return result;

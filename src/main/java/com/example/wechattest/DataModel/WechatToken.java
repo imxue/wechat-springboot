@@ -1,7 +1,7 @@
 package com.example.wechattest.DataModel;
 
 public class WechatToken {
-    public String accesstoken;
+    public String access_token;
     public long time;
 
     public long getTime() {
@@ -12,18 +12,19 @@ public class WechatToken {
         this.time = time;
     }
 
-    public String getAccesstoken() {
-        return accesstoken;
+
+    public String getAccess_token() {
+        return access_token;
     }
 
-    public void setAccesstoken(String accesstoken) {
-        this.accesstoken = accesstoken;
+    public void setAccess_token(String access_token) {
+        this.access_token = access_token;
     }
 
     @Override
     public String toString() {
         return "WechatToken{" +
-                "accesstoken='" + accesstoken + '\'' +
+                "access_token='" + access_token + '\'' +
                 ", time=" + time +
                 '}';
     }

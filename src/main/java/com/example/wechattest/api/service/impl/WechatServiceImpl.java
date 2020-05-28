@@ -36,23 +36,25 @@ public class WechatServiceImpl implements WechatService {
                 "&secret="+myProps.getAppsecret();
         ResponseEntity<WechatToken> responseEntity = restTemplate.getForEntity(url, WechatToken.class);
         System.out.println(responseEntity.getBody().toString());
+        long time = System.currentTimeMillis();
         WechatToken wechatToken = responseEntity.getBody();
+        wechatToken.setTime(time);
         return wechatToken;
     }
     @Override
     public String insertAccessToken(){
         WechatToken wechatToken = this.getAccessTokenFromWechat();
-        String accesstoken = wechatToken.getAccesstoken();
+        String access_token = wechatToken.getAccess_token();
         long time = System.currentTimeMillis();
-        wechatMapper.insertWechatToken(accesstoken,time);
+        wechatMapper.insertWechatToken(access_token,time);
         return "insert success";
     }
     @Override
     public String updateAccessToken(){
         WechatToken wechatToken = this.getAccessTokenFromWechat();
-        String accesstoken = wechatToken.getAccesstoken();
+        String access_token = wechatToken.getAccess_token();
         long time = System.currentTimeMillis();
-        wechatMapper.updateWechatToken(accesstoken,time);
+        wechatMapper.updateWechatToken(access_token,time);
         return "update success";
     }
 }
