@@ -65,7 +65,7 @@ public class WechatInit implements CommandLineRunner {
         }catch (Exception e){
 
         }
-        ResponseEntity<WechatToken> responseEntity = restTemplate.postForEntity(url,postData ,WechatToken.class);
+        ResponseEntity<JSONObject> responseEntity = restTemplate.postForEntity(url,postData ,JSONObject.class);
         LOG.info(responseEntity.getBody().toString());
     }
 
