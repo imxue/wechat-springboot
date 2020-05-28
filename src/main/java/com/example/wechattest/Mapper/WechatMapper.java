@@ -7,12 +7,12 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface WechatMapper {
-    @Select("select wechattoken,time from wechattoken")
+    @Select("select accesstoken,time from wechattoken")
     List<WechatToken> getWechatToken();
 
     @Results({
-            @Result(property = "accesstoken", column = "id"),
-            @Result(property = "time", column = "u"),
+            @Result(property = "accesstoken", column = "accesstoken"),
+            @Result(property = "time", column = "time"),
     })
 
     @Insert("insert wechattoken (accesstoken,time) value (#{accesstoken},#{time})")
