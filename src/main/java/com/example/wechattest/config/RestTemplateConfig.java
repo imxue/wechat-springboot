@@ -1,4 +1,4 @@
-package com.example.wechattest;
+package com.example.wechattest.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

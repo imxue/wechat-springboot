@@ -12,6 +12,12 @@ public class MyProps {
 
     public String appsecret;
 
+    public String createMenuUrl;
+
+    public String getMenuUrl;
+
+    public String menu;
+
     public String getAppid() {
         return appid;
     }
@@ -34,5 +40,29 @@ public class MyProps {
 
     public void setAccessTokenUrl(String accessTokenUrl) {
         this.accessTokenUrl = accessTokenUrl;
+    }
+
+    public String getCreateMenuUrl() {
+        return createMenuUrl;
+    }
+
+    public void setCreateMenuUrl(String createMenuUrl) {
+        this.createMenuUrl = createMenuUrl;
+    }
+
+    public String getGetMenuUrl() {
+        return getMenuUrl;
+    }
+
+    public void setGetMenuUrl(String getMenuUrl) {
+        this.getMenuUrl = getMenuUrl;
+    }
+
+    public String getMenu() {
+        return menu;
+    }
+
+    public void setMenu(String menu) {
+        this.menu = menu;
     }
 }

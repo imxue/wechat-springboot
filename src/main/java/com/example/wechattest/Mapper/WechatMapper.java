@@ -1,6 +1,5 @@
 package com.example.wechattest.Mapper;
 
-import com.example.wechattest.DataModel.User;
 import com.example.wechattest.DataModel.WechatToken;
 import org.apache.ibatis.annotations.*;
 

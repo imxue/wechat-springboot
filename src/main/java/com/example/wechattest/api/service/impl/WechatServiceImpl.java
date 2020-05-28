@@ -26,6 +26,19 @@ public class WechatServiceImpl implements WechatService {
     @Override
     public List<WechatToken> getAccessToken(){
         List<WechatToken> result = wechatMapper.getWechatToken();
+        long nowTime = System.currentTimeMillis();
+        if(result.size()>0 && result.get(0)!=null){
+            long time = result.get(0).getTime();
+            if((nowTime-time)/1000>7200){
+                this.updateAccessToken();
+            }
+        }else{
+            WechatToken wechatToken = this.getAccessTokenFromWechat();
+            if(wechatToken!=null){
+                this.insertAccessToken();
+            }
+            result.add(wechatToken);
+        }
         return result;
     }
     @Override

@@ -29,19 +29,7 @@ public class WechatController {
     public List<WechatToken> getAccesstoken(){
         List<WechatToken> result = null;
         result = wechatService.getAccessToken();
-        long nowTime = System.currentTimeMillis();
-        if(result.size()>0 && result.get(0)!=null){
-            long time = result.get(0).getTime();
-            if((nowTime-time)/1000>7200){
-                wechatService.updateAccessToken();
-            }
-        }else{
-            WechatToken wechatToken = wechatService.getAccessTokenFromWechat();
-            if(wechatToken!=null){
-                wechatService.insertAccessToken();
-            }
-            result.add(wechatToken);
-        }
+
         return result;
     }
 

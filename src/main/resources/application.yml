@@ -2,4 +2,11 @@ wechat:
   #微信相关
   appid: wx9d9bb043b1fd45e0
   appsecret: 019ba69b7742e771e874b9a24c168787
+  #获取全局accesstoken
   accessTokenUrl: https://api.weixin.qq.com/cgi-bin/token
+  #生成菜单
+  createMenuUrl: https://api.weixin.qq.com/cgi-bin/menu/create?access_token=
+  #获取菜单
+  getMenuUrl: https://api.weixin.qq.com/cgi-bin/get_current_selfmenu_info?access_token=
+  #菜单
+  menu: {"button":[{"type":"click","name":"叫","key":"V1001"},{"name":"爸","sub_button":[{"type":"view","name":"搜索","url":"http://www.soso.com/"},{"type":"miniprogram","name":"wxa","url":"http://mp.weixin.qq.com","appid":"wx286b93c14bbf93aa","pagepath":"pages/lunar/index"},{"type":"click","name":"赞一下我们","key":"V1002"}]},{"type":"click","name":"爸","key":"V1003"}]}
