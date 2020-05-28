@@ -15,7 +15,7 @@ public interface WechatMapper {
             @Result(property = "time", column = "time"),
     })
 
-    @Insert("insert wechattoken (access_token,time) value (#{access_token},#{time})")
+    @Insert("insert wechattoken (id,access_token,time) value (0,#{access_token},#{time})")
     Integer insertWechatToken(String access_token,long time);
 
     @Update("update wechattoken set access_token=#{access_token},time=#{time} where id=0")
